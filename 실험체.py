@@ -1,4 +1,5 @@
 import discord
+import os
 import asyncio
 import random
 import openpyxl
@@ -140,5 +141,5 @@ async def on_message(message):
         await client.send_message(message.channel, "실험체 팀나눠 A B C D E/1 2 3 4 5")
 
 
-
-client.run('NTM2OTUyNTM0MTk2Mjg5NTY5.DygSLQ.7Oh51oz9ED8NhcS2kseuiLoO1vU')
+access_token = os.environ["Bot Token"]
+client.run(access_token)
